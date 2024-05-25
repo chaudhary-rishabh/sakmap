@@ -9,19 +9,20 @@ import Tutors from './Tutors'
 import AllCourses from './AllCourses'
 import TestimonialCarousel from '@/app/components/Carousel/TestimonialCarousel'
 import Content from '@/app/components/Content'
+import HomeContainer from './HomeContainer'
 
 const Home = () => {
   return (
     <div>
       <Header />
       <HomeLanding />
+      <HomeContainer />
       <Guidedby />
       {/* <AllCourses /> */}
       <Content />
       <CourseCategory />
       <WhyUs />
       <Tutors />
-      <TestimonialCarousel />
       <Footer />
     </div>
   )

@@ -69,7 +69,7 @@ boxShadow1{
 
 /* social media icons */
 .iconInstagram {
-    color: rgb(255, 255, 255);
+    color: black;
 }
 
 .iconInstagram:hover {
@@ -77,31 +77,31 @@ boxShadow1{
     border-radius: 40px;
 }
 .iconFacebook{
-  color: rgb(255, 255, 255)
+  color: black
 }
 .iconFacebook:hover{
   color: rgb(63, 63, 245);
 }
 .iconWhatsapp{
-  color: rgb(255, 255, 255)
+  color: black
 }
 .iconWhatsapp:hover{
   color: rgb(88, 168, 86);
 }
 .iconYoutube{
-  color: rgb(255, 255, 255)
+  color: black
 }
 .iconYoutube:hover{
   color: rgb(235, 13, 13);
 }
 .iconTwitter{
-  color: rgb(255, 255, 255)
+  color: black
 }
 .iconTwitter:hover{
-  color: rgb(0, 0, 0);
+  color: rgb(63, 63, 245);
 }
 .iconDiscord{
-  color: rgb(255, 255, 255)
+  color: black
 }
 .iconDiscord:hover{
   color: rgb(75, 75, 172);
@@ -109,10 +109,10 @@ boxShadow1{
 
 /* footer navigation */
 .txtColor{
-  color: white;
+  color: black;
 }
 .txtColor:hover{
-  color: rgb(255, 255, 255);
+  color: rgb(0, 0, 0);
   cursor: pointer;
   text-decoration: underline;
 }

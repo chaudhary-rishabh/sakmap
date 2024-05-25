@@ -5,15 +5,15 @@ const Terms = () => {
     return (
         <div>
             <Header />
-            <section className="bg-white dark:bg-white">
+            <section className="bg-white dark:bg-white py-20">
                 <div className="py-8 px-4 mx-auto max-w-screen-xl lg:py-16 lg:px-6">
                     <div className="max-w-screen-lg text-gray-500 sm:text-lg dark:text-gray-400">
                         <h2 className="mb-4 text-4xl tracking-tight font-bold text-gray-900 dark:text-black"></h2>
-                        <h2 className="mb-4 text-4xl tracking-tight font-bold text-gray-900 dark:text-black">Privacy Policy</h2>
+                        <h2 className="mb-4 text-4xl tracking-tight font-bold text-gray-900 dark:text-black">Terms of Service</h2>
                         <p className="mb-4 font-medium">
                             1. Introduction
 
-                            Welcome to SAKMAP . These Terms and Conditions Terms and Conditions govern your relationship with WWW.sakmap.com Service operated by sakmap. By accessing or using the Service, you agree to be bound by these Terms. If you disagree with any part of the terms then you may not access the Service.
+                            Welcome to SAKMAP . These Terms and Conditions Terms and Conditions govern your relationship with www.sakmap.com Service operated by sakmap. By accessing or using the Service, you agree to be bound by these Terms. If you disagree with any part of the terms then you may not access the Service.
 
                         </p>
                         <p className="mb-4 font-medium">
