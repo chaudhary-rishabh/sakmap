@@ -1,14 +1,29 @@
-import Card from "@/app/components/Card";
+import React, { useState, useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
+import Card from "@/app/components/Card";
 import Guidedby from "./Guidedby";
 
-const features = [
-    { name: 'Origin', description: 'Designed by Good Goods, Inc.' },
-    { name: 'Material', description: 'Solid walnut base with rare earth magnets and powder coated steel card cover' },
-];
+// Define an array of image URLs for the carousel
+const images = ["/sakmapStudent3.jpeg", "/sakmapStudent2.jpeg", "/sakmapStudent4.jpeg"];
 
 export default function HomeLanding() {
+    // State to keep track of the current image index
+    const [currentImageIndex, setCurrentImageIndex] = useState(0);
+
+    // Function to update the current image index
+    const updateImageIndex = () => {
+        setCurrentImageIndex((prevIndex) => (prevIndex + 1) % images.length);
+    };
+
+    useEffect(() => {
+        // Set a timeout to change the image every 2 seconds
+        const interval = setInterval(updateImageIndex, 2000);
+
+        // Clear the interval when the component unmounts
+        return () => clearInterval(interval);
+    }, []);
+
     return (
         <div style={{ zIndex: "0" }} className="relative bg-white pt-16 mt-22">
             {/* Yellow half circle on top left */}
@@ -31,8 +46,9 @@ export default function HomeLanding() {
                     </dl>
                 </div>
                 <div className="flex justify-center items-center">
+                    {/* Render the image based on the current index */}
                     <Image
-                        src="/sakmaplanding.png"
+                        src={images[currentImageIndex]}
                         alt="Walnut card tray with white powder coated steel divider and 3 punchout holes."
                         className="rounded-lg shadow-sm bg-black"
                         width={500}
