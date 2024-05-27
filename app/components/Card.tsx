@@ -1,11 +1,11 @@
 import Image from 'next/image'
 import React from 'react'
 
-const Card = () => {
+const Card = ({ imageName, altName }: any) => {
     return (
-        <div className="my-5 max-w-sm flex flex-col items-center justify-center bg-white border border-gray-200 rounded-lg shadow-sm dark:bg-white dark:border-white" style={{ boxShadow: "rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px" }}>
+        <div className="my-5 max-w-sm flex flex-col items-center justify-center bg-white border border-gray-200 rounded-lg shadow-lg dark:bg-white dark:border-white">
             <a href="#">
-                <Image className="rounded-t-lg" src="/sakmaplanding.png" alt="experts sakmap" width={200} height={200} />
+                <Image className="rounded-t-lg" src={imageName} alt={altName} width={200} height={200} />
             </a>
             <div className="p-5">
                 <a href="#">

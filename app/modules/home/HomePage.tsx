@@ -10,6 +10,9 @@ import AllCourses from './AllCourses'
 import TestimonialCarousel from '@/app/components/Carousel/TestimonialCarousel'
 import Content from '@/app/components/Content'
 import HomeContainer from './HomeContainer'
+import CarouselComponent from '@/app/components/Carousel/CarouselComponent'
+import HeaderHome from './HeaderHome'
+import Subscribe from './Subscribe'
 
 const Home = () => {
   return (
@@ -23,6 +26,9 @@ const Home = () => {
       <CourseCategory />
       <WhyUs />
       <Tutors />
+      <HeaderHome heading="What our students say" />
+      <CarouselComponent />
+      <Subscribe />
       <Footer />
     </div>
   )

@@ -116,3 +116,94 @@ boxShadow1{
   cursor: pointer;
   text-decoration: underline;
 }
+
+
+
+/* CarouselComponent css*/
+.carousel-container {
+  position: relative;
+  width: 100%;
+  max-width: 1200px;
+  margin: auto;
+  padding: 0 20px;
+}
+
+.arrow-button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  z-index: 10;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 50px;
+}
+
+.left-arrow {
+  left: 0; /* Adjust to place the arrow outside the carousel */
+}
+
+.right-arrow {
+  right: 0; /* Adjust to place the arrow outside the carousel */
+}
+
+.feather {
+  width: 30px;
+  height: 30px;
+}
+
+.testimonial-card {
+  max-width: 90%;
+  margin: auto;
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+@media (min-width: 768px) {
+  .testimonial-card {
+    max-width: 70%;
+  }
+
+  .arrow-button {
+    width: 40px;
+    height: 40px;
+  }
+
+  .feather {
+    width: 24px;
+    height: 24px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .testimonial-card {
+    max-width: 50%;
+  }
+
+  .arrow-button {
+    width: 50px;
+    height: 50px;
+  }
+
+  .feather {
+    width: 30px;
+    height: 30px;
+  }
+}
+
+
+
+/* testimonial card */
+.testimonial-card {
+  max-width: 300px;
+  margin: auto;
+}
