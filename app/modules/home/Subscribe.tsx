@@ -38,7 +38,7 @@ export default function Subscribe() {
                             </div>
                             <dt className="mt-4 font-semibold text-black">Weekly articles</dt>
                             <dd className="mt-2 leading-7 text-gray-700">
-                                Non laboris consequat cupidatat laborum magna. Eiusmod non irure cupidatat duis commodo amet.
+                                Get weekly new blogs and articles on Tech Market, Jobs and Startups from Sakmap
                             </dd>
                         </div>
                         <div className="flex flex-col items-start">
@@ -47,7 +47,7 @@ export default function Subscribe() {
                             </div>
                             <dt className="mt-4 font-semibold text-black">No spam</dt>
                             <dd className="mt-2 leading-7 text-gray-700">
-                                Officia excepteur ullamco ut sint duis proident non adipisicing. Voluptate incididunt anim.
+                                Get Guidance from experts in every domain and technologies.
                             </dd>
                         </div>
                     </dl>

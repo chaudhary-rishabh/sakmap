@@ -9,12 +9,13 @@ export default function HomeContainer() {
     const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
     // Function to update the current image index
-    const updateImageIndex = () => {
-        setCurrentImageIndex((prevIndex) => (prevIndex + 1) % images.length);
-    };
-
     useEffect(() => {
-        // Set a timeout to change the image every 2 seconds
+        // Function to update the current image index
+        const updateImageIndex = () => {
+            setCurrentImageIndex((prevIndex) => (prevIndex + 1) % images.length);
+        };
+
+        // Set an interval to change the image every 3 seconds
         const interval = setInterval(updateImageIndex, 3000);
 
         // Clear the interval when the component unmounts

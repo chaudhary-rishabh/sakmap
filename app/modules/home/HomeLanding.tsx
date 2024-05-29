@@ -1,8 +1,6 @@
 import React, { useState, useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import Card from "@/app/components/Card";
-import Guidedby from "./Guidedby";
 
 // Define an array of image URLs for the carousel
 const images = ["/sakmapStudent3.jpeg", "/sakmapStudent2.jpeg", "/sakmapStudent4.jpeg"];
@@ -12,12 +10,13 @@ export default function HomeLanding() {
     const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
     // Function to update the current image index
-    const updateImageIndex = () => {
-        setCurrentImageIndex((prevIndex) => (prevIndex + 1) % images.length);
-    };
-
     useEffect(() => {
-        // Set a timeout to change the image every 2 seconds
+        // Function to update the current image index
+        const updateImageIndex = () => {
+            setCurrentImageIndex((prevIndex) => (prevIndex + 1) % images.length);
+        };
+
+        // Set an interval to change the image every 2 seconds
         const interval = setInterval(updateImageIndex, 2000);
 
         // Clear the interval when the component unmounts
