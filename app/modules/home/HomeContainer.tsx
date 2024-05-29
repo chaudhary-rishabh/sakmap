@@ -20,7 +20,7 @@ export default function HomeContainer() {
 
         // Clear the interval when the component unmounts
         return () => clearInterval(interval);
-    }, []);
+    }, [images.length]);
 
     return (
         <div className="bg-white">
