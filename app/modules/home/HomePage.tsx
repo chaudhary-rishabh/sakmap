@@ -6,10 +6,8 @@ import WhyUs from './Whyus'
 import Guidedby from './Guidedby'
 import CourseCategory from './CourseCategory'
 import Tutors from './Tutors'
-import AllCourses from './AllCourses'
 import Content from '@/app/components/Content'
 import HomeContainer from './HomeContainer'
-import HeaderHome from './HeaderHome'
 import Subscribe from './Subscribe'
 import TestimonialHome from './TestimonialHome'
 
@@ -20,11 +18,9 @@ const Home = () => {
       <HomeLanding />
       <HomeContainer />
       <Guidedby />
-      {/* <AllCourses /> */}
       <Content />
       <CourseCategory />
       <WhyUs />
-      {/* <HeaderHome heading="What our students say" /> */}
       <Tutors />
       <TestimonialHome />
       <Subscribe />
