@@ -1,5 +1,3 @@
-import Carousel from '@/app/components/Carousel/Slider'
-import Slider from '@/app/components/Carousel/Slider'
 import Layout from '@/app/layouts/Layout'
 import React from 'react'
 import Stats from './Stats'

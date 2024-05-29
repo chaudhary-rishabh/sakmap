@@ -7,12 +7,11 @@ import Guidedby from './Guidedby'
 import CourseCategory from './CourseCategory'
 import Tutors from './Tutors'
 import AllCourses from './AllCourses'
-import TestimonialCarousel from '@/app/components/Carousel/TestimonialCarousel'
 import Content from '@/app/components/Content'
 import HomeContainer from './HomeContainer'
-import CarouselComponent from '@/app/components/Carousel/CarouselComponent'
 import HeaderHome from './HeaderHome'
 import Subscribe from './Subscribe'
+import TestimonialHome from './TestimonialHome'
 
 const Home = () => {
   return (
@@ -25,9 +24,9 @@ const Home = () => {
       <Content />
       <CourseCategory />
       <WhyUs />
+      {/* <HeaderHome heading="What our students say" /> */}
       <Tutors />
-      <HeaderHome heading="What our students say" />
-      <CarouselComponent />
+      <TestimonialHome />
       <Subscribe />
       <Footer />
     </div>
