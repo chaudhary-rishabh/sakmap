@@ -30,7 +30,7 @@ const subCategories = [
     { name: 'Machine Learning', href: '/courses/machine-learning' },
     { name: 'Environment', href: '/courses/environment' },
     { name: 'RS', href: '/courses/environment' },
-    { name: 'GIS', href: '/courses/gis' },
+    { name: 'Artificial Intelligence', href: '/courses/artificial-intelligence' },
     { name: 'All', href: '/' },
 ]
 const filters = [
@@ -173,7 +173,7 @@ export default function CourseFilters() {
 
                 <main className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
                     <div className="flex items-baseline justify-between border-b border-gray-200 pb-6 pt-24">
-                        <h1 className="text-4xl font-bold tracking-tight text-gray-900">AI Courses</h1>
+                        <h1 className="text-4xl font-bold tracking-tight text-gray-900">GIS Courses</h1>
 
                         <div className="flex items-center">
                             {/* <Menu as="div" className="relative inline-block text-left">
@@ -243,7 +243,7 @@ export default function CourseFilters() {
                                 <ul role="list" className="space-y-4 border-b border-gray-200 pb-6 text-sm font-medium text-gray-900">
                                     {subCategories.map((category) => (
                                         <li key={category.name}>
-                                            <Link href={category.href}>{category.name}</Link>
+                                            <a href={category.href}>{category.name}</a>
                                         </li>
                                     ))}
                                 </ul>

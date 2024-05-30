@@ -17,7 +17,6 @@ import {
 import { XMarkIcon } from '@heroicons/react/24/outline'
 import { ChevronDownIcon, FunnelIcon, MinusIcon, PlusIcon, Squares2X2Icon } from '@heroicons/react/20/solid'
 import CourseListAI from '../course-list/CourseListAI'
-import Link from 'next/link'
 
 const sortOptions = [
     { name: 'Most Popular', href: '#', current: true },
@@ -28,7 +27,7 @@ const sortOptions = [
 ]
 const subCategories = [
     { name: 'Machine Learning', href: '/courses/machine-learning' },
-    { name: 'Environment', href: '/courses/environment' },
+    { name: 'Artificial Intellligence', href: '/courses/artificial-intelligence' },
     { name: 'RS', href: '/courses/environment' },
     { name: 'GIS', href: '/courses/gis' },
     { name: 'All', href: '/' },
@@ -115,9 +114,9 @@ export default function CourseFilters() {
                                         <ul role="list" className="px-2 py-3 font-medium text-gray-900">
                                             {subCategories.map((category) => (
                                                 <li key={category.name}>
-                                                    <Link href={category.href} className="block px-2 py-3">
+                                                    <a href={category.href} className="block px-2 py-3">
                                                         {category.name}
-                                                    </Link>
+                                                    </a>
                                                 </li>
                                             ))}
                                         </ul>
@@ -173,7 +172,7 @@ export default function CourseFilters() {
 
                 <main className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
                     <div className="flex items-baseline justify-between border-b border-gray-200 pb-6 pt-24">
-                        <h1 className="text-4xl font-bold tracking-tight text-gray-900">AI Courses</h1>
+                        <h1 className="text-4xl font-bold tracking-tight text-gray-900">Environment Courses</h1>
 
                         <div className="flex items-center">
                             {/* <Menu as="div" className="relative inline-block text-left">
@@ -243,7 +242,7 @@ export default function CourseFilters() {
                                 <ul role="list" className="space-y-4 border-b border-gray-200 pb-6 text-sm font-medium text-gray-900">
                                     {subCategories.map((category) => (
                                         <li key={category.name}>
-                                            <Link href={category.href}>{category.name}</Link>
+                                            <a href={category.href}>{category.name}</a>
                                         </li>
                                     ))}
                                 </ul>

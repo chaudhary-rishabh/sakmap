@@ -27,7 +27,7 @@ const sortOptions = [
     { name: 'Price: High to Low', href: '#', current: false },
 ]
 const subCategories = [
-    { name: 'Machine Learning', href: '/courses/machine-learning' },
+    { name: 'Artificial Intelligence', href: '/courses/artificial-intelligence' },
     { name: 'Environment', href: '/courses/environment' },
     { name: 'RS', href: '/courses/environment' },
     { name: 'GIS', href: '/courses/gis' },
@@ -173,7 +173,7 @@ export default function CourseFilters() {
 
                 <main className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
                     <div className="flex items-baseline justify-between border-b border-gray-200 pb-6 pt-24">
-                        <h1 className="text-4xl font-bold tracking-tight text-gray-900">AI Courses</h1>
+                        <h1 className="text-4xl font-bold tracking-tight text-gray-900">ML Courses</h1>
 
                         <div className="flex items-center">
                             {/* <Menu as="div" className="relative inline-block text-left">

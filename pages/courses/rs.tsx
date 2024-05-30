@@ -1,12 +1,12 @@
 import Header from '@/app/layouts/Header'
-import MachineLearningModule from '@/app/modules/courses/MachineLearning'
+import RSModule from '@/app/modules/courses/RS'
 import React from 'react'
 
 const Environment = () => {
     return (
         <>
             <Header />
-            <MachineLearningModule />
+            <RSModule />
         </>
     )
 }

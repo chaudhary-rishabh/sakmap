@@ -15,19 +15,19 @@ const product = {
     ],
     images: [
         {
-            src: '/sakmap_home2.jpg',
+            src: '/sakmaplogo.png',
             alt: 'Artificial Intelligence Sakmap Basic Course',
         },
         {
-            src: '/sakmap_home2.jpg',
+            src: '/sakmaplogo.png',
             alt: 'Artificial Intelligence Sakmap Intermediate Course',
         },
         {
-            src: '/sakmap_home2.jpg',
+            src: '/sakmaplogo.png',
             alt: 'Artificial Intelligence Sakmap Advanced Course',
         },
         {
-            src: '/sakmap_home2.jpg',
+            src: '/sakmaplogo.png',
             alt: 'Artificial Intelligence Sakmap Introduction Course',
         },
     ],
@@ -47,15 +47,15 @@ const product = {
         { name: '3XL', inStock: true },
     ],
     description:
-        'The Basic Tee 6-Pack allows you to fully express your vibrant personality with three grayscale options. Feeling adventurous? Put on a heather gray tee. Want to be a trendsetter? Try our exclusive colorway: "Black". Need to add an extra pop of color to your outfit? Our white tee has you covered.',
+        'Welcome to "Introduction to Artificial Intelligence," a comprehensive course designed for beginners eager to dive into the fascinating world of AI. This course offers a broad overview of the fundamental concepts and techniques in artificial intelligence, covering both theoretical foundations and practical applications. You will explore the history of AI, its current state, and potential future trends. By the end of this course, you will have a solid understanding of AI principles and be prepared to delve deeper into specialized areas of AI and machine learning.',
     highlights: [
-        'Hand cut and sewn locally',
-        'Dyed with our proprietary colors',
-        'Pre-washed & pre-shrunk',
-        'Ultra-soft 100% cotton',
+        'Level: Beginner',
+        'Duration: 8 weeks',
+        'Instructor: Dr. Jane Smith, Professor of Computer Science',
+        'Price: paid 499',
     ],
     details:
-        'The 6-Pack includes two black, two white, and two heather gray Basic Tees. Sign up for our subscription service and be the first to get new, exciting colors, like our upcoming "Charcoal Gray" limited release.',
+        'Dr. Jane Smith is a Professor of Computer Science with over 20 years of experience in artificial intelligence research and education. She has authored numerous papers on AI and has a passion for teaching and inspiring the next generation of AI enthusiasts.',
 };
 
 const reviews = { href: '#', average: 4, totalCount: 117 };
@@ -106,13 +106,13 @@ export default function CourseDetails() {
                     </nav>
 
                     {/* Image gallery */}
-                    <div className="mx-auto mt-6 max-w-2xl sm:px-6 lg:grid lg:max-w-7xl lg:grid-cols-3 lg:gap-x-8 lg:px-8">
+                    <div className="mx-auto mt-6 max-w-xl sm:px-6 lg:grid lg:max-w-4xl lg:grid-cols-3 lg:gap-x-8 lg:px-8">
                         <div className="aspect-h-4 aspect-w-3 hidden overflow-hidden rounded-lg lg:block">
                             <Image
                                 src={product.images[0].src}
                                 alt={product.images[0].alt}
-                                width={50}
-                                height={50}
+                                width={100}
+                                height={100}
                                 className="h-full w-full object-cover object-center"
                             />
                         </div>
@@ -121,8 +121,8 @@ export default function CourseDetails() {
                                 <Image
                                     src={product.images[1].src}
                                     alt={product.images[1].alt}
-                                    width={50}
-                                    height={50}
+                                    width={100}
+                                    height={100}
                                     className="h-full w-full object-cover object-center"
                                 />
                             </div>
@@ -130,8 +130,8 @@ export default function CourseDetails() {
                                 <Image
                                     src={product.images[2].src}
                                     alt={product.images[2].alt}
-                                    width={50}
-                                    height={50}
+                                    width={100}
+                                    height={100}
                                     className="h-full w-full object-cover object-center"
                                 />
                             </div>
@@ -140,8 +140,8 @@ export default function CourseDetails() {
                             <Image
                                 src={product.images[3].src}
                                 alt={product.images[3].alt}
-                                width={50}
-                                height={50}
+                                width={100}
+                                height={100}
                                 className="h-full w-full object-cover object-center"
                             />
                         </div>

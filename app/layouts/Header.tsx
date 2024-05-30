@@ -16,10 +16,10 @@ import Image from 'next/image';
 
 const products = [
     { name: 'Artificial Intelligence', description: 'High Level Understanding of Artificial Intelligence', href: 'courses/artificial-intelligence', icon: ChartPieIcon },
-    { name: 'RS', description: 'RS', href: '#', icon: CursorArrowRaysIcon },
-    { name: 'GIS', description: 'All about GIS', href: '#', icon: FingerPrintIcon },
-    { name: 'Machine Learning', description: 'Learn from experts ', href: '#', icon: SquaresPlusIcon },
-    { name: 'Environment', description: 'Learn all about evnvironment', href: '#', icon: ArrowPathIcon },
+    { name: 'RS', description: 'RS', href: '/courses/rs', icon: CursorArrowRaysIcon },
+    { name: 'GIS', description: 'All about GIS', href: '/courses/gis', icon: FingerPrintIcon },
+    { name: 'Machine Learning', description: 'Learn from experts ', href: '/courses/machine-learning', icon: SquaresPlusIcon },
+    { name: 'Environment', description: 'Learn all about evnvironment', href: '/courses/environment', icon: ArrowPathIcon },
 ]
 const callsToAction = [
     { name: 'Watch demo', href: '#', icon: PlayCircleIcon },
