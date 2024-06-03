@@ -1,6 +1,5 @@
 import { useState } from 'react';
 import { StarIcon } from '@heroicons/react/20/solid';
-import { Radio, RadioGroup } from '@headlessui/react';
 import Link from 'next/link'
 import Image from 'next/image';
 import Header from '@/app/layouts/Header';
@@ -36,16 +35,6 @@ const product = {
         { name: 'Gray', class: 'bg-gray-200', selectedClass: 'ring-gray-400' },
         { name: 'Black', class: 'bg-gray-900', selectedClass: 'ring-gray-900' },
     ],
-    sizes: [
-        { name: 'XXS', inStock: false },
-        { name: 'XS', inStock: true },
-        { name: 'S', inStock: true },
-        { name: 'M', inStock: true },
-        { name: 'L', inStock: true },
-        { name: 'XL', inStock: true },
-        { name: '2XL', inStock: true },
-        { name: '3XL', inStock: true },
-    ],
     description:
         'Welcome to "Introduction to Artificial Intelligence," a comprehensive course designed for beginners eager to dive into the fascinating world of AI. This course offers a broad overview of the fundamental concepts and techniques in artificial intelligence, covering both theoretical foundations and practical applications. You will explore the history of AI, its current state, and potential future trends. By the end of this course, you will have a solid understanding of AI principles and be prepared to delve deeper into specialized areas of AI and machine learning.',
     highlights: [
@@ -69,7 +58,6 @@ function classNames(classes: { [key: string]: boolean }): string {
 
 export default function CourseDetails() {
     const [selectedColor, setSelectedColor] = useState(product.colors[0]);
-    const [selectedSize, setSelectedSize] = useState(product.sizes[2]);
 
     return (
         <>
@@ -185,8 +173,6 @@ export default function CourseDetails() {
                                 </div>
                             </div>
                             <form className="mt-10">
-                                {/* Colors */}
-                                {/* Sizes */}
                                 <button
                                     type="submit"
                                     className="mt-10 flex w-full items-center justify-center rounded-md border border-transparent bg-indigo-600 px-8 py-3 text-base font-medium text-white hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"

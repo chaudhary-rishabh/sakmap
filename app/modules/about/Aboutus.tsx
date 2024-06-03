@@ -5,6 +5,7 @@ import Blogs from './Blogs'
 import TestimonialAbout from './TestimonialAbout'
 import ImagesAbout from './ImagesAbout'
 import AboutMain from './AboutMain'
+import WhyUs from './WhyUs'
 
 const Aboutus = () => {
     return (
@@ -13,7 +14,8 @@ const Aboutus = () => {
             <AboutMain />
             <Stats />
             <Blogs />
-            <TestimonialAbout />
+            {/* <TestimonialAbout /> */}
+            <WhyUs />
             <ImagesAbout />
         </Layout>
     )
