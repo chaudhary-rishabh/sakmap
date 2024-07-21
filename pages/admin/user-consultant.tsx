@@ -1,5 +1,6 @@
 import UserConsultantModule from '@/app/modules/admin/UserConsultantModule'
 import React from 'react'
+import withAdminAuth from '@/hoc/withAdminAuth'
 
 const UserConsultant = () => {
     return (
@@ -9,4 +10,4 @@ const UserConsultant = () => {
     )
 }
 
-export default UserConsultant
+export default withAdminAuth(UserConsultant);

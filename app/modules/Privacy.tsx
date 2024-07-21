@@ -4,16 +4,15 @@ import Header from '../layouts/Header'
 const Privacy = () => {
     return (
         <div>
-            <Header />
             <section className="bg-white dark:bg-white py-20">
                 <div className="py-8 px-4 mx-auto max-w-screen-xl lg:py-16 lg:px-6">
                     <div className="max-w-screen-lg text-gray-500 sm:text-lg dark:text-gray-400">
                         <h2 className="mb-4 text-4xl tracking-tight font-bold text-gray-900 dark:text-black"></h2>
                         <h2 className="mb-4 text-4xl tracking-tight font-bold text-gray-900 dark:text-black">Privacy Policy</h2>
                         <p className="mb-4 font-medium">
-                            1. Introduction
+                            1. Introduction<br></br>
 
-                            Welcome to SAKMAP. We value your privacy and are committed to protecting your personal information. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you visit our website [Your Website URL], including any other media form, media channel, mobile website, or mobile application related or connected thereto (collectively, the “Site”). Please read this privacy policy carefully. If you do not agree with the terms of this privacy policy, please do not access the site.
+                            Welcome to SAKMAP. We value your privacy and are committed to protecting your personal information. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you visit our website www.sakmap.com, including any other media form, media channel, mobile website, or mobile application related or connected thereto (collectively, the “Site”). Please read this privacy policy carefully. If you do not agree with the terms of this privacy policy, please do not access the site.
 
                         </p>
                         <p className="mb-4 font-medium">
@@ -28,7 +27,7 @@ const Privacy = () => {
                             Information our servers automatically collect when you access the Site, such as your IP address, your browser type, your operating system, your access times, and the pages you have viewed directly before and after accessing the Site.
 
                             Financial Data
-                            Financial information, such as data related to your payment method (e.g., valid credit card number, card brand, expiration date) that we may collect when you purchase, order, return, exchange, or request information about our services from the Site. We store only very limited, if any, financial information that we collect. Otherwise, all financial information is stored by our payment processor, [Payment Processor Name], and you are encouraged to review their privacy policy and contact them directly for responses to your questions.
+                            Financial information, such as data related to your payment method (e.g., valid credit card number, card brand, expiration date) that we may collect when you purchase, order, return, exchange, or request information about our services from the Site. We store only very limited, if any, financial information that we collect. Otherwise, all financial information is stored by our payment processor, Stripe and Razorpay, and you are encouraged to review their privacy policy and contact them directly for responses to your questions.
                         </p>
 
                         <p className="mb-4 font-medium">
@@ -73,7 +72,7 @@ const Privacy = () => {
 
                         </p>
                         <p className="mb-4 font-medium">
-                            We do not knowingly solicit information from or market to children under the age of 13. If we learn that we have collected personal information from a child under age 13 without verification of parental consent, we will delete that information as quickly as possible. If you believe we might have any information from or about a child under 13, please contact us at [Your Contact Information].
+                            We do not knowingly solicit information from or market to children under the age of 13. If we learn that we have collected personal information from a child under age 13 without verification of parental consent, we will delete that information as quickly as possible. If you believe we might have any information from or about a child under 13, please contact us at contact@sakmap.com
                         </p>
 
                         <p className="mb-4 font-medium">

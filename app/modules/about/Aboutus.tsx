@@ -1,4 +1,3 @@
-import Layout from '@/app/layouts/Layout'
 import React from 'react'
 import Stats from './Stats'
 import Blogs from './Blogs'
@@ -9,15 +8,14 @@ import WhyUs from './WhyUs'
 
 const Aboutus = () => {
     return (
-        // why us, our vision, our goal, 
-        <Layout isProtected={false}>
+        <>
             <AboutMain />
             <Stats />
             <Blogs />
             {/* <TestimonialAbout /> */}
             <WhyUs />
             <ImagesAbout />
-        </Layout>
+        </>
     )
 }
 

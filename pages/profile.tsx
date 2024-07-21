@@ -1,11 +1,12 @@
-import ProfilePage from '@/app/modules/ProfilePage'
+import Layout from '@/app/layouts/Layout'
+import ProfileModule from '@/app/modules/ProfileModule'
 import React from 'react'
 
 const Profile = () => {
     return (
-        <>
-            <ProfilePage />
-        </>
+        <Layout isProtected>
+            <ProfileModule />
+        </Layout>
     )
 }
 

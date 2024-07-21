@@ -16,8 +16,9 @@ import {
 } from '@headlessui/react'
 import { XMarkIcon } from '@heroicons/react/24/outline'
 import { ChevronDownIcon, FunnelIcon, MinusIcon, PlusIcon, Squares2X2Icon } from '@heroicons/react/20/solid'
-import CourseListAI from '../course-list/CourseListAI'
+import CourseListAI from '../course-list/CourseList'
 import Link from 'next/link'
+import CourseListGIS from '../course-list/CourseListGIS'
 
 const sortOptions = [
     { name: 'Most Popular', href: '#', current: true },
@@ -29,9 +30,9 @@ const sortOptions = [
 const subCategories = [
     { name: 'Machine Learning', href: '/courses/machine-learning' },
     { name: 'Environment', href: '/courses/environment' },
-    { name: 'RS', href: '/courses/environment' },
+    { name: 'Remote Sensing', href: '/courses/remote-sensing' },
     { name: 'Artificial Intelligence', href: '/courses/artificial-intelligence' },
-    { name: 'All', href: '/' },
+    { name: 'All Courses', href: '/courses/all-courses' },
 ]
 const filters = [
     {
@@ -293,7 +294,7 @@ export default function CourseFilters() {
                             </form>
 
                             {/* Product grid */}
-                            <div className="lg:col-span-3"><CourseListAI /></div>
+                            <div className="lg:col-span-3"><CourseListGIS /></div>
                         </div>
                     </section>
                 </main>

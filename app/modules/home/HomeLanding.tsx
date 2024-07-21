@@ -39,8 +39,8 @@ export default function HomeLanding() {
 
                     <dl className="mt-16 grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 sm:gap-y-16 lg:gap-x-8">
                         <div className="border-t border-gray-200 pt-4">
-                            <Link href="/login" type="button" className="text-white bg-gray-800 hover:bg-gray-900 focus:outline-none focus:ring-4 focus:ring-gray-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-gray-800 dark:hover:bg-gray-700 dark:focus:ring-gray-700 dark:border-gray-700">Get Started</Link>
-                            <Link href="#aboutus" type="button" className="text-gray-900 bg-white border border-gray-300 focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-100 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 white:bg-gray-800 dark:text-black dark:border-gray-600 gray:hover:bg-gray-700 dark:hover:border-gray-600 dark:focus:ring-gray-700">Learn More</Link>
+                            <Link href="/consulting/custom" type="button" className="text-white bg-gray-800 hover:bg-gray-900 focus:outline-none focus:ring-4 focus:ring-gray-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-gray-800 dark:hover:bg-gray-700 dark:focus:ring-gray-700 dark:border-gray-700">Consult Us</Link>
+                            <Link href="/courses/all-courses" type="button" className="text-gray-900 bg-white border border-gray-300 focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-100 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 white:bg-gray-800 dark:text-black dark:border-gray-600 gray:hover:bg-gray-700 dark:hover:border-gray-600 dark:focus:ring-gray-700">Explore Course</Link>
                         </div>
                     </dl>
                 </div>

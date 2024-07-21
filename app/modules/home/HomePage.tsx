@@ -14,7 +14,6 @@ import TestimonialHome from './TestimonialHome'
 const Home = () => {
   return (
     <div>
-      <Header />
       <HomeLanding />
       <HomeContainer />
       <Guidedby />
@@ -24,7 +23,6 @@ const Home = () => {
       <Tutors />
       <TestimonialHome />
       <Subscribe />
-      <Footer />
     </div>
   )
 }

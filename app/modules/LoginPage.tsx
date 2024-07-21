@@ -1,9 +1,40 @@
-import React from 'react'
-import Header from '../layouts/Header'
-import Link from 'next/link'
+// pages/login.tsx
+import React, { useState } from 'react';
+import Header from '../layouts/Header';
+import Link from 'next/link';
 import Image from 'next/image';
+import { useRouter } from 'next/router';
+import { useAuthActions } from '../../hooks/useAuthActions';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const LoginPage = () => {
+    const { login } = useAuthActions();
+    const [email, setEmail] = useState('');
+    const [password, setPassword] = useState('');
+    const [error, setError] = useState<string | null>(null);
+    const router = useRouter();
+
+    const handleSubmit = async (e: React.FormEvent) => {
+        e.preventDefault();
+        try {
+            await login(email, password);
+            console.log('Login successful');
+            toast.success('Login successful');
+            router.push('/');
+        } catch (error) {
+            if (error instanceof Error) {
+                setError(error.message);
+                console.error('Login error:', error.message);
+                toast.error(`Login error: ${error.message}`);
+            } else {
+                setError('An unknown error occurred');
+                console.error('Login error: An unknown error occurred');
+                toast.error('Login error: An unknown error occurred');
+            }
+        }
+    };
+
     return (
         <div>
             <Header />
@@ -20,9 +51,8 @@ const LoginPage = () => {
                         Sign in to your account
                     </h2>
                 </div>
-
                 <div className="mt-10 sm:mx-auto sm:w-full sm:max-w-sm">
-                    <form className="space-y-6" action="#" method="POST">
+                    <form className="space-y-6" onSubmit={handleSubmit}>
                         <div>
                             <label htmlFor="email" className="block text-sm font-medium leading-6 text-gray-900">
                                 Email address
@@ -34,11 +64,12 @@ const LoginPage = () => {
                                     type="email"
                                     autoComplete="email"
                                     required
+                                    value={email}
+                                    onChange={(e) => setEmail(e.target.value)}
                                     className="block w-full rounded-md border-0 py-1.5 bg-white text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset sm:text-sm sm:leading-6"
                                 />
                             </div>
                         </div>
-
                         <div>
                             <div className="flex items-center justify-between">
                                 <label htmlFor="password" className="block text-sm font-medium leading-6 text-gray-900">
@@ -57,11 +88,12 @@ const LoginPage = () => {
                                     type="password"
                                     autoComplete="current-password"
                                     required
+                                    value={password}
+                                    onChange={(e) => setPassword(e.target.value)}
                                     className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset bg-white sm:text-sm sm:leading-6"
                                 />
                             </div>
                         </div>
-
                         <div>
                             <button
                                 type="submit"
@@ -70,8 +102,12 @@ const LoginPage = () => {
                                 Sign in
                             </button>
                         </div>
+                        {error && (
+                            <div className="text-red-500 text-sm mt-2">
+                                {error}
+                            </div>
+                        )}
                     </form>
-
                     <p className="mt-10 text-center text-sm text-gray-500">
                         New to SAKMAP?{' '}
                         <Link href="/signup" className="font-semibold leading-6 text-indigo-600 hover:text-indigo-500">
@@ -80,8 +116,9 @@ const LoginPage = () => {
                     </p>
                 </div>
             </div>
+            <ToastContainer />
         </div>
-    )
-}
+    );
+};
 
-export default LoginPage
+export default LoginPage;

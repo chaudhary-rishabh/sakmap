@@ -1,5 +1,6 @@
 import UserProfileModule from '@/app/modules/admin/UserProfileModule'
 import React from 'react'
+import withAdminAuth from '@/hoc/withAdminAuth'
 
 const UserProfile = () => {
     return (
@@ -9,4 +10,4 @@ const UserProfile = () => {
     )
 }
 
-export default UserProfile
+export default withAdminAuth(UserProfile);

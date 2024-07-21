@@ -1,6 +1,5 @@
 import { Fragment, useState } from 'react'
 import { Dialog, Disclosure, Popover, Transition } from '@headlessui/react'
-import sakmapLogo from './sakmaplogo.png'
 import {
     ArrowPathIcon,
     Bars3Icon,
@@ -15,15 +14,11 @@ import Link from 'next/link'
 import Image from 'next/image';
 
 const products = [
-    { name: 'Artificial Intelligence', description: 'High Level Understanding of Artificial Intelligence', href: 'courses/artificial-intelligence', icon: ChartPieIcon },
-    { name: 'RS', description: 'RS', href: '/courses/rs', icon: CursorArrowRaysIcon },
-    { name: 'GIS', description: 'All about GIS', href: '/courses/gis', icon: FingerPrintIcon },
+    { name: 'Artificial Intelligence', description: 'High Level Understanding of Artificial Intelligence', href: '/courses/artificial-intelligence', icon: ChartPieIcon },
+    { name: 'Remote Sensing', description: 'Remote sensing', href: '/courses/remote-sensing', icon: CursorArrowRaysIcon },
+    { name: 'Geographic Information Systems', description: 'All about GIS', href: '/courses/geographic-information-systems', icon: FingerPrintIcon },
     { name: 'Machine Learning', description: 'Learn from experts ', href: '/courses/machine-learning', icon: SquaresPlusIcon },
     { name: 'Environment', description: 'Learn all about evnvironment', href: '/courses/environment', icon: ArrowPathIcon },
-]
-const callsToAction = [
-    { name: 'Watch demo', href: '#', icon: PlayCircleIcon },
-    { name: 'Contact sales', href: '#', icon: PhoneIcon },
 ]
 
 function classNames(...classes: any) {
@@ -75,9 +70,6 @@ export default function Header() {
                                             key={item.name}
                                             className="group relative flex items-center gap-x-6 rounded-lg p-4 text-sm leading-6 hover:bg-gray-50"
                                         >
-                                            <div className="flex h-11 w-11 flex-none items-center justify-center rounded-lg bg-gray-50 group-hover:bg-white">
-                                                <item.icon className="h-6 w-6 text-gray-600 group-hover:text-indigo-600" aria-hidden="true" />
-                                            </div>
                                             <div className="flex-auto">
                                                 <a href={item.href} className="block font-semibold text-gray-900">
                                                     {item.name}
@@ -86,18 +78,6 @@ export default function Header() {
                                                 <p className="mt-1 text-gray-600">{item.description}</p>
                                             </div>
                                         </div>
-                                    ))}
-                                </div>
-                                <div className="grid grid-cols-2 divide-x divide-gray-900/5 bg-gray-50">
-                                    {callsToAction.map((item) => (
-                                        <a
-                                            key={item.name}
-                                            href={item.href}
-                                            className="flex items-center justify-center gap-x-2.5 p-3 text-sm font-semibold leading-6 text-gray-900 hover:bg-gray-100"
-                                        >
-                                            <item.icon className="h-5 w-5 flex-none text-gray-400" aria-hidden="true" />
-                                            {item.name}
-                                        </a>
                                     ))}
                                 </div>
                             </Popover.Panel>
@@ -151,7 +131,7 @@ export default function Header() {
                                                 />
                                             </Disclosure.Button>
                                             <Disclosure.Panel className="mt-2 space-y-2">
-                                                {[...products, ...callsToAction].map((item) => (
+                                                {[...products].map((item) => (
                                                     <Disclosure.Button
                                                         key={item.name}
                                                         as="a"

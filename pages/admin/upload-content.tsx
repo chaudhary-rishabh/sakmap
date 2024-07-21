@@ -1,5 +1,6 @@
 import UploadContentModule from '@/app/modules/admin/UploadContentModule'
 import React from 'react'
+import withAdminAuth from '@/hoc/withAdminAuth'
 
 const UploadContent = () => {
     return (
@@ -9,4 +10,4 @@ const UploadContent = () => {
     )
 }
 
-export default UploadContent
+export default withAdminAuth(UploadContent);

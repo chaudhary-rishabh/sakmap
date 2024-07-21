@@ -1,5 +1,6 @@
 import DashboardModule from '@/app/modules/admin/DashboardModule'
 import React from 'react'
+import withAdminAuth from '@/hoc/withAdminAuth'
 
 const index = () => {
     return (
@@ -9,4 +10,4 @@ const index = () => {
     )
 }
 
-export default index
+export default withAdminAuth(index);

@@ -1,4 +1,5 @@
 import { Fragment, useState } from 'react';
+import { useAuth } from '@/context/AuthContext';
 import { Dialog, Disclosure, Popover, Transition, Menu } from '@headlessui/react';
 import {
     ArrowPathIcon,
@@ -15,31 +16,21 @@ import {
 import { ChevronDownIcon, PhoneIcon, PlayCircleIcon } from '@heroicons/react/20/solid';
 import Link from 'next/link';
 import Image from 'next/image';
-
-const products = [
-    { name: 'Artificial Intelligence', description: 'High Level Understanding of Artificial Intelligence', href: 'courses/artificial-intelligence', icon: ChartPieIcon },
-    { name: 'RS', description: 'RS', href: '#', icon: CursorArrowRaysIcon },
-    { name: 'GIS', description: 'All about GIS', href: '#', icon: FingerPrintIcon },
-    { name: 'Machine Learning', description: 'Learn from experts ', href: '#', icon: SquaresPlusIcon },
-    { name: 'Environment', description: 'Learn all about environment', href: '#', icon: ArrowPathIcon },
-];
-
-const callsToAction = [
-    { name: 'Watch demo', href: '#', icon: PlayCircleIcon },
-    { name: 'Contact sales', href: '#', icon: PhoneIcon },
-];
+type ProtectedHeaderProps = {
+    logout: () => Promise<void>; // Define the type of the logout function
+};
 
 const dashboardItems = [
-    { name: 'Artificial Intelligence', description: 'AI Courses Overview', href: '#', icon: HomeIcon },
-    { name: 'Machine Learning', description: 'Machine Learning Courses Overview', href: '#', icon: UserGroupIcon },
-    { name: 'Environment', description: 'Environment Overview', href: '#', icon: PhoneIcon },
-    { name: 'GIS', description: 'GIS Courses Overview', href: '#', icon: CalendarIcon },
-    { name: 'RS', description: 'RS Courses Overview and view reports', href: '#', icon: PhoneIcon },
+    { name: 'Artificial Intelligence', description: 'AI Courses Overview', href: '/courses/artificial-intelligence', icon: HomeIcon },
+    { name: 'Machine Learning', description: 'Machine Learning Courses Overview', href: '/courses/machine-learning', icon: UserGroupIcon },
+    { name: 'Environment', description: 'Environment Overview', href: '/courses/environment', icon: PhoneIcon },
+    { name: 'Geographic Information Systems', description: 'GIS Courses Overview', href: '/courses/geographic-information-systems', icon: CalendarIcon },
+    { name: 'Remote Sensing', description: 'RS Courses Overview and view reports', href: '/courses/remote-sensing', icon: PhoneIcon },
 ];
 
 const userNavigation = [
-    { name: 'Your Profile', href: '#' },
-    { name: 'Settings', href: '#' },
+    { name: 'Your Profile', href: '/profile' },
+    { name: 'Settings', href: '/settings' },
     { name: 'Sign out', href: '#' },
 ];
 
@@ -47,9 +38,10 @@ function classNames(...classes: any) {
     return classes.filter(Boolean).join(' ');
 }
 
-export default function ProtectedHeader() {
+export default function ProtectedHeader({ logout }: ProtectedHeaderProps) {
     const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-
+    const { user } = useAuth();
+    const initial = user?.email ? user.email[0].toUpperCase() : '';
     return (
         <header style={{ zIndex: '100' }} className="bg-white shadow-md fixed top-0 left-0 right-0">
             <nav className="mx-auto flex max-w-7xl items-center justify-between p-6 lg:px-8" aria-label="Global">
@@ -92,9 +84,6 @@ export default function ProtectedHeader() {
                                             key={item.name}
                                             className="group relative flex items-center gap-x-6 rounded-lg p-4 text-sm leading-6 hover:bg-gray-50"
                                         >
-                                            <div className="flex h-11 w-11 flex-none items-center justify-center rounded-lg bg-gray-50 group-hover:bg-white">
-                                                <item.icon className="h-6 w-6 text-gray-600 group-hover:text-indigo-600" aria-hidden="true" />
-                                            </div>
                                             <div className="flex-auto">
                                                 <a href={item.href} className="block font-semibold text-gray-900">
                                                     {item.name}
@@ -112,7 +101,7 @@ export default function ProtectedHeader() {
                     <Link href="/consulting/custom" className="text-sm font-semibold leading-6 text-gray-900">
                         Consultant
                     </Link>
-                    <Link href="/consulting/custom" className="text-sm font-semibold leading-6 text-gray-900">
+                    <Link href="/purchases" className="text-sm font-semibold leading-6 text-gray-900">
                         Purchases
                     </Link>
                     <Link href="/about" className="text-sm font-semibold leading-6 text-gray-900">
@@ -128,7 +117,11 @@ export default function ProtectedHeader() {
                             <div>
                                 <Menu.Button className="flex rounded-full bg-gray-800 text-sm text-white focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800">
                                     <span className="sr-only">Open user menu</span>
-                                    <Image className="h-8 w-8 rounded-full" src="/sakmapProfile2.png" alt="sakmap header logo" width={32} height={32} />
+
+                                    <div className="relative inline-flex items-center justify-center w-10 h-10 overflow-hidden bg-gray-100 rounded-full dark:bg-gray-600">
+                                        <span className="text-2xl font-bold mb-1 text-gray-600 dark:text-gray-300">{initial}</span>
+                                    </div>
+
                                 </Menu.Button>
                             </div>
                             <Transition
@@ -150,6 +143,7 @@ export default function ProtectedHeader() {
                                                         active ? 'bg-gray-100' : '',
                                                         'block px-4 py-2 text-sm text-gray-700'
                                                     )}
+                                                    onClick={item.name === 'Sign out' ? logout : undefined}
                                                 >
                                                     {item.name}
                                                 </a>
@@ -210,7 +204,7 @@ export default function ProtectedHeader() {
                                 <Link href="/consulting/custom" className="-mx-3 block rounded-lg py-2 pl-3 pr-3 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">
                                     Consultant
                                 </Link>
-                                <Link href="/consulting/custom" className="-mx-3 block rounded-lg py-2 pl-3 pr-3 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">
+                                <Link href="/purchases" className="-mx-3 block rounded-lg py-2 pl-3 pr-3 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">
                                     Purchases
                                 </Link>
                                 <Link href="/about" className="-mx-3 block rounded-lg py-2 pl-3 pr-3 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">
@@ -226,6 +220,7 @@ export default function ProtectedHeader() {
                                         key={item.name}
                                         href={item.href}
                                         className="-mx-3 block rounded-lg py-2 pl-3 pr-3 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
+                                        onClick={item.name === 'Sign out' ? logout : undefined}
                                     >
                                         {item.name}
                                     </a>

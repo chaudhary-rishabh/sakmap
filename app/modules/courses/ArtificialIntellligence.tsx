@@ -16,7 +16,7 @@ import {
 } from '@headlessui/react'
 import { XMarkIcon } from '@heroicons/react/24/outline'
 import { ChevronDownIcon, FunnelIcon, MinusIcon, PlusIcon, Squares2X2Icon } from '@heroicons/react/20/solid'
-import CourseListAI from '../course-list/CourseListAI'
+import CourseListAI from '../course-list/CourseList'
 import Link from 'next/link'
 
 const sortOptions = [
@@ -29,9 +29,9 @@ const sortOptions = [
 const subCategories = [
     { name: 'Machine Learning', href: '/courses/machine-learning' },
     { name: 'Environment', href: '/courses/environment' },
-    { name: 'RS', href: '/courses/environment' },
-    { name: 'GIS', href: '/courses/gis' },
-    { name: 'All', href: '/' },
+    { name: 'Remote Sensing', href: '/courses/remote-sensing' },
+    { name: 'Geographic Information System', href: '/courses/geographic-information-systems' },
+    { name: 'All Courses', href: '/courses/all-courses' },
 ]
 const filters = [
     {

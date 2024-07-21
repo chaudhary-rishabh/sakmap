@@ -1,11 +1,12 @@
 import ConsultingPage from '@/app/modules/ConsultingPage'
 import React from 'react'
+import Layout from '@/app/layouts/Layout'
 
 const custom = () => {
     return (
-        <div>
+        <Layout isProtected>
             <ConsultingPage />
-        </div>
+        </Layout>
     )
 }
 
