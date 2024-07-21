@@ -14,7 +14,7 @@ const PurchasesCard: React.FC<PurchasesCardProps> = ({ purchases }) => {
                     <div className="mx-auto max-w-screen-sm text-center mb-8 lg:mb-16">
                         <h2 className="mb-4 text-4xl tracking-tight font-extrabold text-black">Your Courses</h2>
                     </div>
-                    <div className="grid gap-8 mb-6 lg:mb-16 md:grid-cols-2">
+                    {/* <div className="grid gap-8 mb-6 lg:mb-16 md:grid-cols-2">
                         {purchases.map((purchase, index) => (
                             <div key={index} className="items-center bg-white rounded-lg shadow sm:flex border border-gray-200">
                                 <a href="#">
@@ -35,7 +35,7 @@ const PurchasesCard: React.FC<PurchasesCardProps> = ({ purchases }) => {
                                 </div>
                             </div>
                         ))}
-                    </div>
+                    </div> */}
                 </div>
             </section>
         </div>
