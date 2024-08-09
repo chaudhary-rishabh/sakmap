@@ -30,7 +30,7 @@ export default function Header() {
 
     return (
         <header style={{ zIndex: "100" }} className="bg-white shadow-md fixed top-0 left-0 right-0">
-            <nav className="mx-auto flex max-w-7xl items-center justify-between p-6 lg:px-8" aria-label="Global">
+            <nav className="mx-auto flex max-w-7xl items-center justify-between p-3 lg:px-8" aria-label="Global">
                 <div className="flex lg:flex-1">
                     <Link href="/" className="-m-1.5 p-1.5">
                         <span className="sr-only">Sakmap</span>
@@ -86,6 +86,9 @@ export default function Header() {
 
                     <Link href="/consulting/custom" className="text-sm font-semibold leading-6 text-gray-900">
                         Consultant
+                    </Link>
+                    <Link href="/products" className="text-sm font-semibold leading-6 text-gray-900">
+                        Products
                     </Link>
                     <Link href="/about" className="text-sm font-semibold leading-6 text-gray-900">
                         About Us
@@ -150,6 +153,12 @@ export default function Header() {
                                     className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
                                 >
                                     Consultant
+                                </Link>
+                                <Link
+                                    href="/products"
+                                    className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
+                                >
+                                    Products
                                 </Link>
                                 <Link
                                     href="/about"

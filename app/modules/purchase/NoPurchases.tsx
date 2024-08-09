@@ -5,7 +5,7 @@ const NoPurchases = () => {
     const router = useRouter();
 
     const navigate = () => {
-        router.push('/course/ai');
+        router.push('/courses/all-courses');
     };
     return (
         <div className="flex flex-col min-h-screen">

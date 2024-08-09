@@ -1,3 +1,4 @@
+import SkeletonCourseList from "@/app/components/skeleton/SkeletonCourseList";
 import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useState } from "react";
@@ -5,7 +6,7 @@ import { useEffect, useState } from "react";
 export default function CourseListML() {
     const [categories, setCategories] = useState([]);
     const [error, setError] = useState(null);
-
+    const [loading, setLoading] = useState<boolean>(true);
     useEffect(() => {
         async function fetchCategories() {
             try {
@@ -16,14 +17,19 @@ export default function CourseListML() {
                 const data = await response.json();
                 const filteredData = data.filter((category: any) => category.category_name === "Machine Learning");
                 setCategories(filteredData);
+                setLoading(false);
             } catch (error: any) {
                 setError(error.message);
+                setLoading(false);
             }
         }
 
         fetchCategories();
     }, []);
 
+    if (loading) {
+        return <><SkeletonCourseList /></>;
+    }
     if (error) {
         return <div>Error: {error}</div>;
     }

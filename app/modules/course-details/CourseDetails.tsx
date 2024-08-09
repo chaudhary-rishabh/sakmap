@@ -1,7 +1,11 @@
 import { useState, useEffect } from 'react';
 import Image from 'next/image';
 import { useRouter } from 'next/router';
+import { useAuth } from "../../../context/AuthContext"
 import VideoPlayer from '@/app/components/VideoPlayer';
+import Payment from '@/app/components/Payment';
+import SkeletonProductDesc from '@/app/components/skeleton/SkeletonProductDesc';
+import SkeletonCourseDetail from '@/app/components/skeleton/SkeletonCourseDetail';
 
 interface Course {
     category_name: string;
@@ -20,6 +24,8 @@ export default function CourseDetails() {
     const [error, setError] = useState<string | null>(null);
     const router = useRouter();
     const { courseName } = router.query;
+    const [loading, setLoading] = useState<boolean>(true);
+    const { user } = useAuth();
 
     useEffect(() => {
         async function fetchCourseDetails() {
@@ -34,11 +40,13 @@ export default function CourseDetails() {
                 console.log(foundCourse, "foundCourse");
                 if (foundCourse) {
                     setCourse(foundCourse);
+                    setLoading(false);
                 } else {
                     throw new Error('Course not found');
                 }
             } catch (error: any) {
                 setError(error.message);
+                setLoading(false);
             }
         }
 
@@ -62,16 +70,17 @@ export default function CourseDetails() {
         return formatted;
     }
 
-    console.log(formatCategoryFromUrl("one+two+three")); // Output: "One Two Three"
-    console.log(formatCategoryFromUrl("machine+learning+course+four+basic")); // Output: "Machine Learning Course"
-
-
     if (error) {
         return <div>Error: {error}</div>;
     }
+    if (loading) {
+        return <><SkeletonCourseDetail /></>;
+    }
+    if (loading) {
 
+    }
     if (!course) {
-        return <div>Loading...</div>;
+        return <><SkeletonCourseDetail /></>;
     }
 
     return (
@@ -140,14 +149,8 @@ export default function CourseDetails() {
                         <p className="mt-2 text-gray-600">{course.syllabus}</p>
 
                         <div className="mt-6">
-                            <form>
-                                <button
-                                    type="submit"
-                                    className="px-6 py-3 bg-indigo-600 text-white rounded-md hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500"
-                                >
-                                    Buy Now
-                                </button>
-                            </form>
+                            <Payment amountToPay={course.course_price} message='Buy Now'>
+                            </Payment>
                         </div>
                     </div>
                 </div>

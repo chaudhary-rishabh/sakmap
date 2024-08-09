@@ -3,15 +3,14 @@ import Image from "next/image"
 const posts = [
     {
         id: 1,
-        title: 'Boost your conversion rate',
+        title: 'Phd in physics',
         href: '#',
         description:
-            'Illo sint voluptas. Error voluptates culpa eligendi. Hic vel totam vitae illo. Non aliquid explicabo necessitatibus unde. Sed exercitationem placeat consectetur nulla deserunt vel. Iusto corrupti dicta.',
+            'We provide learning with latest technologies and latest trends followed by all organizations.',
         date: 'Mar 16, 2020',
         datetime: '2020-03-16',
-        category: { title: 'Marketing', href: '#' },
         author: {
-            name: 'Michael Foster',
+            name: 'Abhishek sharma',
             role: 'Co-Founder / CTO',
             href: '#',
             imageUrl:
@@ -25,7 +24,6 @@ const posts = [
         description:
             'We at sakmap aim to deliver the best learning experience with our courses and consultant service to various sectors with quick response',
         datetime: '2020-03-16',
-        category: { title: 'Marketing', href: '#' },
         author: {
             name: 'Shital Sharma',
             role: 'Co-Founder / CTO',
@@ -41,7 +39,6 @@ const posts = [
         description:
             'Our Aim is to provide easy & affordable access of various new technologies to students and working professional',
         datetime: '2020-03-16',
-        category: { title: 'Marketing', href: '#' },
         author: {
             name: 'Agardeep ',
             role: 'Co-Founder / CTO',
@@ -71,10 +68,8 @@ export default function Blogs() {
                                     {post.date}
                                 </time>
                                 <a
-                                    href={post.category.href}
                                     className="relative z-10 rounded-full bg-gray-50 px-3 py-1.5 font-medium text-gray-600 hover:bg-gray-100"
                                 >
-                                    {post.category.title}
                                 </a>
                             </div>
                             <div className="group relative">

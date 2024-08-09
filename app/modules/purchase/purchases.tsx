@@ -3,6 +3,7 @@ import { supabase } from '../../../supabase/supabaseClient';
 import { Purchase } from '../../../types';
 import NoPurchases from './NoPurchases'
 import PurchasesCard from './PurchasesCard'
+import SkeletonPurchase from '@/app/components/skeleton/SkeletonPurchase';
 
 const Purchases = () => {
     const [purchases, setPurchases] = useState<Purchase[]>([]);
@@ -32,7 +33,7 @@ const Purchases = () => {
     }, []);
 
     if (loading) {
-        return <div>Loading...</div>;
+        return <><SkeletonPurchase /></>;
     }
 
     return purchases.length === 0 ? <NoPurchases /> : <PurchasesCard purchases={purchases} />;

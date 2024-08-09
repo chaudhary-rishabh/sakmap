@@ -1,3 +1,4 @@
+import SkeletonCourseList from "@/app/components/skeleton/SkeletonCourseList";
 import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useState } from "react";
@@ -5,6 +6,7 @@ import { useEffect, useState } from "react";
 export default function CourseListAll() {
     const [categories, setCategories] = useState([]);
     const [error, setError] = useState(null);
+    const [loading, setLoading] = useState<boolean>(true);
 
     useEffect(() => {
         async function fetchCategories() {
@@ -16,13 +18,19 @@ export default function CourseListAll() {
                 const data = await response.json();
                 // const filteredData = data.filter((category: any) => category.category_name === "Artificial Intelligence");
                 setCategories(data);
+                setLoading(false);
             } catch (error: any) {
                 setError(error.message);
+                setLoading(false);
             }
         }
 
         fetchCategories();
     }, []);
+
+    if (loading) {
+        return <><SkeletonCourseList /></>;
+    }
 
     if (error) {
         return <div>Error: {error}</div>;
@@ -51,7 +59,7 @@ export default function CourseListAll() {
                                 />
                             </div>
                             <h3 className="mt-4 text-sm text-gray-700">{category.course_name}</h3>
-                            <p className="mt-1 text-lg font-medium text-gray-900">{category.price}</p>
+                            <p className="mt-1 text-lg font-medium text-gray-900">₹{category.price}</p>
                         </Link>
                     ))}
                 </div>

@@ -24,7 +24,7 @@ export default function HomeLanding() {
     }, []);
 
     return (
-        <div style={{ zIndex: "0" }} className="relative bg-white pt-16 mt-22">
+        <div style={{ zIndex: "0" }} className="relative bg-white">
             {/* Yellow half circle on top left */}
             <div style={{ zIndex: "0" }} className="absolute top-0 left-0 w-60 h-60 bg-yellow-500 rounded-br-full"></div>
             {/* Blue half circle on bottom right */}

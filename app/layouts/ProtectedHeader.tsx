@@ -44,7 +44,7 @@ export default function ProtectedHeader({ logout }: ProtectedHeaderProps) {
     const initial = user?.email ? user.email[0].toUpperCase() : '';
     return (
         <header style={{ zIndex: '100' }} className="bg-white shadow-md fixed top-0 left-0 right-0">
-            <nav className="mx-auto flex max-w-7xl items-center justify-between p-6 lg:px-8" aria-label="Global">
+            <nav className="mx-auto flex max-w-7xl items-center justify-between p-3 lg:px-8" aria-label="Global">
                 <div className="flex lg:flex-1">
                     <Link href="/" className="-m-1.5 p-1.5">
                         <span className="sr-only">Sakmap</span>
@@ -101,14 +101,14 @@ export default function ProtectedHeader({ logout }: ProtectedHeaderProps) {
                     <Link href="/consulting/custom" className="text-sm font-semibold leading-6 text-gray-900">
                         Consultant
                     </Link>
+                    <Link href="/products" className="text-sm font-semibold leading-6 text-gray-900">
+                        Products
+                    </Link>
                     <Link href="/purchases" className="text-sm font-semibold leading-6 text-gray-900">
                         Purchases
                     </Link>
                     <Link href="/about" className="text-sm font-semibold leading-6 text-gray-900">
                         About Us
-                    </Link>
-                    <Link href="/contact" className="text-sm font-semibold leading-6 text-gray-900">
-                        Contact Us
                     </Link>
                 </Popover.Group>
                 <div className="hidden lg:flex lg:flex-1 lg:justify-end">
@@ -204,14 +204,14 @@ export default function ProtectedHeader({ logout }: ProtectedHeaderProps) {
                                 <Link href="/consulting/custom" className="-mx-3 block rounded-lg py-2 pl-3 pr-3 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">
                                     Consultant
                                 </Link>
+                                <Link href="/products" className="-mx-3 block rounded-lg py-2 pl-3 pr-3 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">
+                                    Products
+                                </Link>
                                 <Link href="/purchases" className="-mx-3 block rounded-lg py-2 pl-3 pr-3 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">
                                     Purchases
                                 </Link>
                                 <Link href="/about" className="-mx-3 block rounded-lg py-2 pl-3 pr-3 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">
                                     About Us
-                                </Link>
-                                <Link href="/contact" className="-mx-3 block rounded-lg py-2 pl-3 pr-3 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">
-                                    Contact Us
                                 </Link>
                             </div>
                             <div className="py-6">
