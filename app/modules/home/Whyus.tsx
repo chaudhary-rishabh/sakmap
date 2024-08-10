@@ -15,7 +15,7 @@ const stats = [
 
 export default function WhyUs() {
     return (
-        <div className="relative isolate overflow-hidden bg-white py-24 sm:py-32">
+        <div className="relative isolate overflow-hidden bg-gradient-to-r from-blue-600 mt-8 via-transparent to-white py-12 sm:py-12">
             {/* <Image
                 src="/background_sakmap1.png"
                 alt="why sakmap"
@@ -65,7 +65,6 @@ export default function WhyUs() {
                     </dl>
                 </div>
             </div>
-            <div style={{ borderBottom: "3px solid black", marginTop: "40px" }} />
         </div>
     )
 }

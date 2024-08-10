@@ -28,7 +28,7 @@ export default function HomeLanding() {
             {/* Yellow half circle on top left */}
             <div style={{ zIndex: "0" }} className="absolute top-0 left-0 w-60 h-60 bg-yellow-500 rounded-br-full"></div>
             {/* Blue half circle on bottom right */}
-            <div style={{ zIndex: "0" }} className="absolute bottom-0 right-0 w-40 h-40 bg-blue-500 rounded-tl-full"></div>
+            <div style={{ zIndex: "0" }} className="absolute bottom-0 right-0 w-60 h-60 bg-blue-500 rounded-tl-full"></div>
             <div className="mx-auto grid max-w-2xl grid-cols-1 items-center gap-x-8 gap-y-16 px-4 py-24 sm:px-6 sm:py-32 lg:max-w-7xl lg:grid-cols-2 lg:px-8">
                 <div style={{ zIndex: "10" }}>
                     <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">Explore Creative Courses</h2>
@@ -49,7 +49,7 @@ export default function HomeLanding() {
                     <Image
                         src={images[currentImageIndex]}
                         alt="Walnut card tray with white powder coated steel divider and 3 punchout holes."
-                        className="rounded-lg shadow-sm bg-black"
+                        className="rounded-3xl shadow-2xl bg-black z-50"
                         width={500}
                         height={600}
                     />

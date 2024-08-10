@@ -42,43 +42,43 @@ export default function Content() {
                         </div>
                     </div>
                 </div>
-                <div className="-ml-12 -mt-12 p-12 lg:sticky lg:top-4 lg:col-start-2 lg:row-span-2 lg:row-start-1 lg:overflow-hidden">
+                <div className="lg:sticky lg:top-4 lg:col-start-2 lg:row-span-2 lg:row-start-1 lg:overflow-hidden">
                     <HorizontalCard />
                 </div>
                 <div className="lg:col-span-2 lg:col-start-1 lg:row-start-2 lg:mx-auto lg:grid lg:w-full lg:max-w-7xl lg:grid-cols-2 lg:gap-x-8 lg:px-8">
                     <div className="lg:pr-4">
                         <div className="max-w-xl text-base leading-7 text-gray-700 lg:max-w-lg">
-                            <ul role="list" className="mt-8 space-y-8 text-gray-600">
+                            <ul role="list" className="space-y-4 text-gray-600">
                                 <li className="flex gap-x-3">
-                                    <CpuChipIcon className="mt-1 h-5 w-5 flex-none text-indigo-600" aria-hidden="true" />
+                                    <CpuChipIcon className="mt-1 h-5 w-5 flex-none text-blue-600 font-bold" aria-hidden="true" />
                                     <span>
                                         <strong className="font-semibold text-gray-900">Artificial Intelligence: </strong>
                                         Artificial Intelligence (AI) is the simulation of human intelligence by machines, enabling them to perform tasks like learning, reasoning, problem-solving, and decision-making.
                                     </span>
                                 </li>
                                 <li className="flex gap-x-3">
-                                    <CodeBracketIcon className="mt-1 h-5 w-5 flex-none text-indigo-600" aria-hidden="true" />
+                                    <CodeBracketIcon className="mt-1 h-5 w-5 flex-none text-blue-600 font-bold" aria-hidden="true" />
                                     <span>
                                         <strong className="font-semibold text-gray-900">Machine Learning: </strong>
                                         Machine Learning (ML) is a subset of AI that enables systems to learn and improve from experience without being explicitly programmed.
                                     </span>
                                 </li>
                                 <li className="flex gap-x-3">
-                                    <GlobeAltIcon className="mt-1 h-5 w-5 flex-none text-indigo-600" aria-hidden="true" />
+                                    <GlobeAltIcon className="mt-1 h-5 w-5 flex-none text-blue-600 font-bold" aria-hidden="true" />
                                     <span>
                                         <strong className="font-semibold text-gray-900">Environment: </strong>
                                         Environment Studies is the interdisciplinary field focused on understanding and addressing the complex interactions between humans and the natural environment.
                                     </span>
                                 </li>
                                 <li className="flex gap-x-3">
-                                    <MapIcon className="mt-1 h-5 w-5 flex-none text-indigo-600" aria-hidden="true" />
+                                    <MapIcon className="mt-1 h-5 w-5 flex-none text-blue-600 font-bold" aria-hidden="true" />
                                     <span>
                                         <strong className="font-semibold text-gray-900">RS: </strong>
                                         Remote Sensing (RS) is the technique of acquiring information about the Earth surface from a distance, typically using satellites or aircraft to gather data.
                                     </span>
                                 </li>
                                 <li className="flex gap-x-3">
-                                    <MapPinIcon className="mt-1 h-5 w-5 flex-none text-indigo-600" aria-hidden="true" />
+                                    <MapPinIcon className="mt-1 h-5 w-5 flex-none text-blue-600 font-bold" aria-hidden="true" />
                                     <span>
                                         <strong className="font-semibold text-gray-900">GIS: </strong>
                                         Geographic Information Systems (GIS) is a framework for gathering, managing, and analyzing spatial and geographic data, providing insights through maps and visualizations.

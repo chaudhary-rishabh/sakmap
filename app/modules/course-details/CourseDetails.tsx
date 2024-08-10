@@ -94,44 +94,23 @@ export default function CourseDetails() {
                             <Image
                                 src={course.course_thumbnail_url}
                                 alt={course.course_name}
-                                width={200}
-                                height={400}
-                                className="object-cover rounded-lg"
+                                width={500}
+                                height={500}
+                                className="object-cover rounded-2xl shadow-xl shadow-gray-500"
                             />
                         </div>
                         {/* Video */}
-                        <div className="lg:col-span-1 lg:row-span-2">
-                            <div className="aspect-h-5 aspect-w-4 lg:aspect-h-4 lg:aspect-w-3 overflow-hidden sm:overflow-hidden">
-                                <div className='pt-16' style={{ paddingTop: '90%', position: 'relative', marginTop: '10px' }}>
-                                    <iframe
-                                        src="https://player.vimeo.com/video/987883027?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
-                                        frameBorder="0"
-                                        allow="autoplay; fullscreen; picture-in-picture; clipboard-write"
-                                        style={{
-                                            position: 'absolute',
-                                            top: 0,
-                                            left: 0,
-                                            width: '180%',
-                                            height: '160%',
-                                            borderRadius: '10%',
-                                            margin: "2%"
-                                        }}
-                                        title="6209573-uhd_4096_2160_25fps"
-                                    ></iframe>
-                                </div>
-                            </div>
-
-                        </div>
                         {/* <VideoPlayer videoId={"ukzFI9rgwfU"} thumbnailUrl="https://img.youtube.com/vi/dQw4w9WgXcQ/0.jpg" /> */}
                     </div>
-                    <hr></hr>
                     {/* Course details */}
                     <div className="mt-6">
-                        <h1 className="text-3xl font-bold text-gray-900">{course.course_name}</h1>
+                        <div className="mt-6 bg-blue-600 p-4 rounded-2xl">
+                            <p className="text-lg font-bold text-gray-50">{course.course_name}</p>
+                        </div>
 
                         <div className="mt-6">
                             <p className="text-xl font-semibold text-gray-900">Price: ₹{course.course_price}</p>
-                            <p className="text-gray-600">Duration: {course.course_duration} Minutes</p>
+                            <p className="text-xl text-gray-900 font-semibold">Duration: {course.course_duration} Minutes</p>
                         </div>
 
                         <p className="mt-2 text-gray-900 font-bold">Description:</p>

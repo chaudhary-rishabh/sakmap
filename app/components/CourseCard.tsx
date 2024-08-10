@@ -9,7 +9,7 @@ const CourseCard = ({ courseName, coursePrice, courseImage, href }: any) => {
 
             <div className="w-full max-w-sm flex flex-col items-center justify-center mb-5 bg-white border border-white rounded-lg dark:bg-white dark:border-white shadow-md">
                 <Link href={href}>
-                    <Image className="p-8 rounded-t-lg" src={courseImage} alt="sakmap featured course" width={300} height={200} />
+                    <Image className="rounded-lg" src={courseImage} alt="sakmap featured course" width={300} height={200} />
                 </Link>
                 <div className="px-5 pb-5">
                     <a href="#">

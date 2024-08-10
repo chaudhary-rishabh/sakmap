@@ -49,8 +49,8 @@ const TestimonialHome: React.FC = () => {
     ];
 
     return (
-        <div className="min-h-screen bg-gray-10 flex flex-col items-center justify-center py-22">
-            <h1 className="text-4xl font-bold mb-8">Testimonials</h1>
+        <div className="min-h-screen bg-gray-10 flex flex-col items-center justify-center">
+            <h1 className="text-4xl font-bold">Testimonials</h1>
             <div className="w-full overflow-auto custom-scrollbar">
                 <div className="flex space-x-4 px-4">
                     {testimonials.map((testimonial, index) => (

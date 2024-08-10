@@ -24,14 +24,14 @@ export default function HomeContainer() {
 
     return (
         <div className="bg-white">
-            <div className="mx-auto max-w-7xl py-24 sm:px-6 sm:py-32 lg:px-8">
-                <div className="relative isolate overflow-hidden bg-gray-50 px-6 pt-16 shadow-2xl sm:rounded-3xl sm:px-16 md:pt-24 lg:flex lg:gap-x-20 lg:px-24 lg:pt-0">
+            <div className="mx-auto max-w-7xl sm:px-16 px-4 rounded-2xl lg:px-8">
+                <div className="relative isolate overflow-hidden bg-yellow-50 px-6 pt-16 pb-8 shadow-lg rounded-2xl sm:rounded-3xl sm:px-16 md:pt-24 lg:flex lg:gap-x-20 lg:px-24 lg:pt-0">
                     <svg
                         viewBox="0 0 1024 1024"
                         className="absolute left-1/2 top-1/2 -z-10 h-[64rem] w-[64rem] -translate-y-1/2 [mask-image:radial-gradient(closest-side,white,transparent)] sm:left-full sm:-ml-80 lg:left-1/2 lg:ml-0 lg:-translate-x-1/2 lg:translate-y-0"
                         aria-hidden="true"
                     >
-                        <circle cx={512} cy={512} r={512} fill="url(#759c1415-0410-454c-8f7c-9a820de03641)" fillOpacity="0.9" />
+                        <circle cx={512} cy={512} r={512} fill="url(#759c1415-0410-454c-8f7c-9a820de03641)" fillOpacity="1" />
                         <defs>
                             <radialGradient id="759c1415-0410-454c-8f7c-9a820de03641">
                                 <stop stopColor="yellow" />
@@ -52,7 +52,7 @@ export default function HomeContainer() {
                     <div className="relative mt-16 h-80 lg:mt-8">
                         {/* Render the image based on the current index */}
                         <Image
-                            className="col-span-2 max-h-42 rounded-xl w-full object-contain lg:col-span-1"
+                            className="col-span-2 max-h-42 rounded-2xl w-full object-contain lg:col-span-1"
                             src={images[currentImageIndex]}
                             alt="Transistor"
                             width={358}
