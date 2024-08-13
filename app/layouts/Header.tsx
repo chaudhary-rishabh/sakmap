@@ -30,7 +30,7 @@ export default function Header() {
 
     return (
         <header style={{ zIndex: "100" }} className="bg-white shadow-md fixed top-0 left-0 right-0">
-            <nav className="mx-auto flex max-w-7xl items-center justify-between p-3 lg:px-8" aria-label="Global">
+            <nav className="mx-auto flex max-w-7xl items-center justify-between p-4 lg:px-8" aria-label="Global">
                 <div className="flex lg:flex-1">
                     <Link href="/" className="-m-1.5 p-1.5">
                         <span className="sr-only">Sakmap</span>
@@ -84,21 +84,21 @@ export default function Header() {
                         </Transition>
                     </Popover>
 
-                    <Link href="/consulting/custom" className="text-sm font-semibold leading-6 text-gray-900">
+                    <Link href="/consulting/custom" className="hover:text-blue-700 active:text-blue-700 text-sm font-semibold leading-6 text-gray-900">
                         Consultant
                     </Link>
-                    <Link href="/products" className="text-sm font-semibold leading-6 text-gray-900">
+                    <Link href="/products" className="hover:text-blue-700 active:text-blue-700 text-sm font-semibold leading-6 text-gray-900">
                         Products
                     </Link>
-                    <Link href="/about" className="text-sm font-semibold leading-6 text-gray-900">
+                    <Link href="/about" className="hover:text-blue-700 active:text-blue-700 text-sm font-semibold leading-6 text-gray-900">
                         About Us
                     </Link>
-                    <Link href="/contact" className="text-sm font-semibold leading-6 text-gray-900">
+                    <Link href="/contact" className="hover:text-blue-700 active:text-blue-700 text-sm font-semibold leading-6 text-gray-900">
                         Contact Us
                     </Link>
                 </Popover.Group>
                 <div className="hidden lg:flex lg:flex-1 lg:justify-end">
-                    <Link href="/login" className="text-sm font-semibold leading-6 text-gray-900">
+                    <Link href="/login" className="hover:text-blue-700 active:text-blue-700 text-sm font-semibold leading-6 text-gray-900">
                         Log in <span aria-hidden="true">&rarr;</span>
                     </Link>
                 </div>
@@ -126,7 +126,7 @@ export default function Header() {
                                 <Disclosure as="div" className="-mx-3">
                                     {({ open }) => (
                                         <>
-                                            <Disclosure.Button className="flex w-full items-center justify-between rounded-lg py-2 pl-3 pr-3.5 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">
+                                            <Disclosure.Button className="hover:text-blue-700 active:text-blue-700 flex w-full items-center justify-between rounded-lg py-2 pl-3 pr-3.5 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">
                                                 Courses
                                                 <ChevronDownIcon
                                                     className={classNames(open ? 'rotate-180' : '', 'h-5 w-5 flex-none')}

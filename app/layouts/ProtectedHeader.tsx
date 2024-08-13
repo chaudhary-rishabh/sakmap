@@ -98,16 +98,16 @@ export default function ProtectedHeader({ logout }: ProtectedHeaderProps) {
                         </Transition>
                     </Popover>
 
-                    <Link href="/consulting/custom" className="text-sm font-semibold leading-6 text-gray-900">
+                    <Link href="/consulting/custom" className="hover:text-blue-700 active:text-blue-700 text-sm font-semibold leading-6 text-gray-900">
                         Consultant
                     </Link>
-                    <Link href="/products" className="text-sm font-semibold leading-6 text-gray-900">
+                    <Link href="/products" className="hover:text-blue-700 active:text-blue-700 text-sm font-semibold leading-6 text-gray-900">
                         Products
                     </Link>
-                    <Link href="/purchases" className="text-sm font-semibold leading-6 text-gray-900">
+                    <Link href="/purchases" className="hover:text-blue-700 active:text-blue-700 text-sm font-semibold leading-6 text-gray-900">
                         Purchases
                     </Link>
-                    <Link href="/about" className="text-sm font-semibold leading-6 text-gray-900">
+                    <Link href="/about" className="hover:text-blue-700 active:text-blue-700 text-sm font-semibold leading-6 text-gray-900">
                         About Us
                     </Link>
                 </Popover.Group>

@@ -6,6 +6,8 @@ import VideoPlayer from '@/app/components/VideoPlayer';
 import Payment from '@/app/components/Payment';
 import SkeletonProductDesc from '@/app/components/skeleton/SkeletonProductDesc';
 import SkeletonCourseDetail from '@/app/components/skeleton/SkeletonCourseDetail';
+import { Carousel as ResponsiveCarousel } from 'react-responsive-carousel';
+import 'react-responsive-carousel/lib/styles/carousel.min.css';
 
 interface Course {
     category_name: string;
@@ -88,20 +90,39 @@ export default function CourseDetails() {
             <div className="bg-white">
                 <div className="pt-6 mx-auto max-w-2xl px-4 pb-16 sm:px-6 lg:max-w-7xl lg:px-8">
                     {/* Image and Video container */}
-                    <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
-                        {/* Image */}
-                        <div className="aspect-w-1 mt-20 aspect-h-1 sm:aspect-w-2 sm:aspect-h-1 lg:col-span-2">
-                            <Image
-                                src={course.course_thumbnail_url}
-                                alt={course.course_name}
-                                width={500}
-                                height={500}
-                                className="object-cover rounded-2xl shadow-xl shadow-gray-500"
-                            />
+                    <ResponsiveCarousel
+                        showArrows={true}
+                        showStatus={true}
+                        showIndicators={true}
+                        infiniteLoop
+                        useKeyboardArrows
+                        autoPlay
+                        interval={3000}
+                        swipeable={false} // Disable swiping if needed
+                    >
+                        {/* Image Slide */}
+                        <div className="relative m-auto mt-20 max-w-[98%] sm:max-w-[40%]">
+                            <div className="max-w-sm m-auto rounded-3xl mb-6 overflow-hidden shadow-2xl">
+                                <Image
+                                    src={course.course_thumbnail_url}
+                                    alt={course.course_name}
+                                    width={500}
+                                    height={500}
+                                    className="object-cover rounded-2xl shadow-xl shadow-gray-500"
+                                />
+                            </div>
                         </div>
-                        {/* Video */}
-                        {/* <VideoPlayer videoId={"ukzFI9rgwfU"} thumbnailUrl="https://img.youtube.com/vi/dQw4w9WgXcQ/0.jpg" /> */}
-                    </div>
+
+                        {/* Video Slide */}
+                        <div className="relative m-auto mt-20 max-w-[98%] sm:max-w-[60%]">
+                            <div className="max-w-sm m-auto rounded-3xl mb-6 overflow-hidden shadow-2xl">
+                                <VideoPlayer
+                                    videoId="ukzFI9rgwfU"
+                                    thumbnailUrl="https://img.youtube.com/vi/dQw4w9WgXcQ/0.jpg"
+                                />
+                            </div>
+                        </div>
+                    </ResponsiveCarousel>
                     {/* Course details */}
                     <div className="mt-6">
                         <div className="mt-6 bg-blue-600 p-4 rounded-2xl">

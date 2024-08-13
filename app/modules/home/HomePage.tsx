@@ -12,9 +12,9 @@ import TestimonialHome from './TestimonialHome'
 import Guidedby from './Guidedby'
 
 const images = [
-  { src: '/sakmap_experts1.png', alt: 'Sakmap Expert Mam' },
-  { src: '/sakmap_experts2.png', alt: 'Sakmap Expert sir' },
-  { src: '/sakmap_experts3.png', alt: 'Sakmap Expert sir' },
+  { src: '/sakmap_experts1.png', alt: 'Sakmap Expert Mam', name: 'expert name', desc: 'description about experts', link: 'https://xyz.com' },
+  { src: '/sakmap_experts2.png', alt: 'Sakmap Expert sir', name: 'expert name', desc: 'description about experts', link: 'https://xyz.com' },
+  { src: '/sakmap_experts3.png', alt: 'Sakmap Expert sir', name: 'expert name', desc: 'description about experts', link: 'https://xyz.com' },
 ];
 
 const Home = () => {

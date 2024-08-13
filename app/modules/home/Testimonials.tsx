@@ -10,7 +10,7 @@ interface TestimonialProps {
 
 const Testimonials: React.FC<TestimonialProps> = ({ name, title, text, image }) => {
     return (
-        <div className="max-w-lg mx-auto p-6 bg-white rounded-lg shadow-lg">
+        <div className="max-w-lg mx-auto bg-white rounded-lg shadow-lg">
             <div className="flex items-center">
                 <Image
                     className="w-16 h-16 rounded-full mr-4"
