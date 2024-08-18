@@ -1,5 +1,3 @@
-import { useEffect, useState } from 'react';
-import { supabase } from '../supabase/supabaseClient';
 import PurchasesModule from '@/app/modules/purchase/purchases';
 import Layout from '@/app/layouts/Layout';
 import withAuth from '@/hoc/withAuth';

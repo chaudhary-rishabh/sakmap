@@ -13,6 +13,7 @@ import { Bars3Icon, BellIcon, XMarkIcon } from '@heroicons/react/24/outline'
 import Image from 'next/image'
 import { useRouter } from 'next/router';
 import { supabase } from '../../../supabase/supabaseClient';
+import Link from 'next/link';
 
 const user = {
     imageUrl:
@@ -49,7 +50,7 @@ export default function AdminHeader() {
                             <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
                                 <div className="flex h-16 items-center justify-between">
                                     <div className="flex items-center">
-                                        <div className="flex-shrink-0">
+                                        <Link href="/admin/dashboard" className="flex-shrink-0">
                                             <Image
                                                 height={100}
                                                 width={100}
@@ -57,7 +58,7 @@ export default function AdminHeader() {
                                                 src="/sakmaplogo.png"
                                                 alt="sakmap admin panel"
                                             />
-                                        </div>
+                                        </Link>
                                     </div>
                                     <div className="hidden md:block">
                                         <div className="ml-4 flex items-center md:ml-6">
@@ -144,8 +145,8 @@ export default function AdminHeader() {
                 </Disclosure>
 
                 <header className="bg-white shadow">
-                    <div className="mx-auto max-w-7xl px-4 py-6 sm:px-6 lg:px-8">
-                        <h1 className="text-3xl font-bold tracking-tight text-gray-900">Dashboard</h1>
+                    <div className="mx-auto max-w-7xl px-4 py-2 sm:px-2 lg:px-8">
+                        <h1 className="text-md text-center font-bold tracking-tight text-gray-900">Dashboard</h1>
                     </div>
                 </header>
                 <main>

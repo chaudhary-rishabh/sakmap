@@ -4,7 +4,7 @@ import React from 'react'
 const Cards = ({ href, title, description }: any) => {
     return (
         <>
-            <div className="max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow dark:bg-white dark:border-white my-10 mx-auto">
+            <div className="max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow dark:bg-white dark:border-white my-6 mx-auto">
                 <a href="#">
                     <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-gray-700">{title}</h5>
                 </a>

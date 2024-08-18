@@ -98,7 +98,7 @@ export default function CourseDetails() {
                         useKeyboardArrows
                         autoPlay
                         interval={3000}
-                        swipeable={false} // Disable swiping if needed
+                        swipeable={false}
                     >
                         {/* Image Slide */}
                         <div className="relative m-auto mt-20 max-w-[98%] sm:max-w-[40%]">
